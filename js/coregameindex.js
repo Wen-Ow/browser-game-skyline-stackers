@@ -1,6 +1,5 @@
 // Summary for Core Game Mechanics
 
-// Step by step 
 /*
 1. Initialize the Game Board:
 Create a 2D array to represent the game board, with each cell initialized to zero (indicating an empty space).
