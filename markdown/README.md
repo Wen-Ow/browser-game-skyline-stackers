@@ -41,7 +41,8 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 3. **Clear Lines:** Align blocks to fill horizontal lines completely to clear them.
 4. **Track Progress:** Watch your score and level increase as you play.
 5. **Game Over:** The game ends when the blocks stack to the top of the screen.
-6. **Restart:** Click "Restart" to play again.
+6. **Reset Game:** Click "Reset Game" to play again.
+7. **Pause Game:** Click "Pause Game" to pause while playing the game.
 
 ## Technologies Used
 
@@ -52,7 +53,8 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 ## Tools Used
 
 - Visual Studio Code
-- Mural
+- Mural (wireframes)
+- Figma
 - Jira
 
 ## Phase 1 MVP Features
@@ -60,7 +62,6 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 - Basic gameplay mechanics (movement, rotation, line clearing)
 - Score tracking system
 - Game over and restart/reset functionality
-
 
 ## Backlog Items / Planned Features
 
@@ -75,7 +76,15 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 ## Attributions / Credit
 
-- **Images and Art:**
+- **Fonts**
+
+- Google Fonts
+
+- **Images / Art:** 
+
+- Pixabay
+
 - **Icons:**
-- **Game Design Inspiration:**
+
+- Material Symbols & Icons
 
