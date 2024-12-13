@@ -78,6 +78,11 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 ## Attributions / Credit
 
+- **Design Inspiration or Guide**
+- https://www.codewithfaraz.com/content/141/creating-a-tetris-game-with-javascript
+
+- https://codepen.io/tommyho/pen/PorzmrV
+
 - **Fonts**
 
 - Google Fonts(https://fonts.google.com/)
