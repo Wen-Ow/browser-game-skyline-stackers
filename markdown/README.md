@@ -4,16 +4,18 @@
 
 **Date: December 16, 2024**
 
-Screenshot/Logo
+Application/Game
 ![some alt text](www.url_to_an_image.com/image)
 
 ## Getting Started Link
+
 **Deployed Link:**
 
-**Jira Board:**
+**Jira Board Planning:** (https://owwen.atlassian.net/jira/software/projects/BTS/boards/1)
 
-**Mural Wireframe:**
+**Mural Wireframe:** (https://app.mural.co/t/skylinestackersgame8022/m/skylinestackersgame8022/1733794138173/a7e05a3ebbe7e5cb6f21169f0a7295040db3650f?sender=u78332d02d4701893ad2c6510)
 
+**Figma:** (https://www.figma.com/design/Z3o4zvZOjmQoaEK2WQQifN/Unit-1-project?node-id=0-1&t=mAGpgUfF2edWboeu-1)
 
 ## Description
 
@@ -46,8 +48,8 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 ## Technologies Used
 
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
 
 ## Tools Used
@@ -78,13 +80,19 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 - **Fonts**
 
-- Google Fonts
+- Google Fonts(https://fonts.google.com/)
 
 - **Images / Art:** 
 
-- Pixabay
+- Pixabay(https://pixabay.com/)
 
 - **Icons:**
 
-- Material Symbols & Icons
+- Material Symbols & Icons(https://fonts.google.com/icons)
+
+- **Code**
+
+- w3schools.com
+- stackoverflow.cpm
+- mdn.com
 

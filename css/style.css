@@ -14,17 +14,17 @@ body {
 
 /* Background images for specific pages */
 body.menu-page {
-    background-image: url('../images/Menu Screen.jpg') no-repeat center center fixed;
+    background: url('../images/Menu Screen.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.instructions-page {
-    background-image: url('../images/Instructions Screen.jpg') no-repeat center center fixed;
+    background: url('../images/Instructions Screen.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 body.game-page {
-    background-image: url('../images/Playing Mode Screen.jpg') no-repeat center center fixed;
+    background: url('../images/Playing Mode Screen.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
