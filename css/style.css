@@ -8,9 +8,36 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #ffffff;
     line-height: 1.6;
 }
+
+button {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #fedfe8;
+}
+
+a.button {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+a.button:hover {
+    background-color: #fedfe8;
+}   
 
 /* Background images for specific pages */
 body.menu-page {
@@ -24,17 +51,50 @@ body.instructions-page {
 }
 
 body.game-page {
+    position: relative;
     background: url('../images/Playing Mode Screen.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: white;
+}
+
+.score, .level, .lines {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.instructions-text, .instructions-list {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+
 }
 
 /* Container for the game */
 .game-container {
-    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+canvas#tetris-board {
+    border: 2px solid white;
+    background-color: #000000;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 /* Header styling */
