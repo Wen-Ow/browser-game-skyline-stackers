@@ -23,19 +23,19 @@ In ***Skyline Stackers***, the classic tetris game is reimagined against the bac
 
 Why did I decide to create ***Skyline Stackers***? I enjoy arcade games so I wanted to combine the fun of a classic block-stacking game with the thrill of designing a skyline. It's not just about clearing lines, it's about improving spatial awareness, strategic planning, and quick decision-making, all while enjoying a relaxing yet challenging gameplay experience. 
 
-Can you keep up with the pace and construct the skyline before the blocks pile too high? It's time to stack smart and make the city shine like never before.
+Can you keep up with the pace and construct the skyline before the blocks pile too high? It's time to stack smart and make the city glow like never before.
 
 ## Objectives
 
 - **Clear Lines:** Align and stack tetrominoes to form complete horizontal lines and clear them from the board.
 - **Build the Skyline:** Clear lines and progress through levels.
-- **Score Points:** Earn points for every cleared line, with bonuses for combo clears of multiple lines.
+- **Score Points:** Earn points for every cleared line.
 - **Survive and Progress:** Keep the tetrominoes from reaching the top of the screen while advancing to higher levels with faster block drops.
 
 ## How To Play
 
-1. **Start the Game:** Click the "Play" button to begin.
-2. **Move Blocks:** Use the following controls to position tetris blocks.
+1. **Start the Game:** Click the "Play Game" button to begin.
+2. **Controls:** Use the following controls to position tetris blocks.
 - Left Arrow: Move left
 - Right Arrow: Move right
 - Down Arrow: Move down faster
@@ -63,7 +63,9 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 - Basic gameplay mechanics (movement, rotation, line clearing)
 - Score tracking system
-- Game over and restart/reset functionality
+- Pause game and reset game functionality
+- Instructions
+- Win and lose condition
 
 ## Backlog Items / Planned Features
 
@@ -77,11 +79,6 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 - Create a mobile-friendly version
 
 ## Attributions / Credit
-
-- **Design Inspiration or Guide**
-- https://www.codewithfaraz.com/content/141/creating-a-tetris-game-with-javascript
-
-- https://codepen.io/tommyho/pen/PorzmrV
 
 - **Fonts**
 
@@ -98,6 +95,6 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 - **Code**
 
 - w3schools.com
-- stackoverflow.cpm
+- stackoverflow.com
 - mdn.com
 
