@@ -158,7 +158,6 @@ function collide(matrix, piece) {
     for (let x = 0; x < piece.shape[y].length; x++) {
       if (
         piece.shape[y][x] !== 0 &&
-        // Check boundaries and collisions
         (matrix[y + piece.y] === undefined ||
           matrix[y + piece.y][x + piece.x] === undefined ||
           matrix[y + piece.y][x + piece.x] !== 0)
@@ -174,82 +173,33 @@ function clearLines() {
   let linesClearedThisTurn = 0;
 
   for (let r = ROWS - 1; r >= 0; r--) {
-    // Start from the bottom
     if (board[r].every((cell) => cell !== 0)) {
-      // Check if the row is full
-      board.splice(r, 1); // Remove the row
-      board.unshift(new Array(COLS).fill(0)); // Add a new empty row at the top
-      linesClearedThisTurn++; // Increment cleared lines
-      r++; // Recheck the same row since the board shifted
+      board.splice(r, 1);
+      board.unshift(new Array(COLS).fill(0));
+      linesClearedThisTurn++;
     }
   }
 
   if (linesClearedThisTurn > 0) {
-    linesCleared += linesClearedThisTurn; // Update the total lines cleared
+    linesCleared += linesClearedThisTurn;
+    score += linesClearedThisTurn * 100;
 
-    let pointsEarned = 0;
-    switch (linesClearedThisTurn) {
-      case 1:
-        pointsEarned = 100; // 100 points for 1 line
-        break;
-      case 2:
-        pointsEarned = 300; // 300 points for 2 lines
-        break;
-      case 3:
-        pointsEarned = 500; // 500 points for 3 lines
-        break;
-      case 4:
-        pointsEarned = 800; // 800 points for 4 lines
-        break;
-    }
-    score += pointsEarned; // Update the score
-
-    const newLevel = Math.floor(linesCleared / LINES_PER_LEVEL) + 1; // Update the level after clearing enough lines
+    const newLevel = Math.floor(linesCleared / LINES_PER_LEVEL) + 1;
     if (newLevel > level) {
       level = newLevel;
-      dropInterval = Math.max(200, 1000 - level * 100); // The higher the level, the faster the drop (minimum 200ms)
-      displayLevelUpMessage(); // Display the level up message
+      dropInterval = Math.max(200, 1000 - level * 100);
+      displayLevelUpMessage();
     }
 
-    updateStats(); // Update the stats on the screen
+    updateStats();
   }
-}
-
-function displayLevelUpMessage() {
-  if (levelUpMessageDisplayed) return; // Prevent multiple messages from being displayed
-
-  levelUpMessageDisplayed = true;
-  const gameContainer = document.getElementById("game-container");
-
-  const message = document.createElement("div"); // Create a message element
-  message.className = "level-up-message";
-  message.textContent = `Congratulations, you leveled up! You are now on ${level}!`;
-
-  // Style the message
-  message.style.position = "absolute";
-  message.style.top = "50%";
-  message.style.left = "50%";
-  message.style.transform = "translate(-50%, -50%)";
-  message.style.color = "white";
-  message.style.fontSize = "2rem";
-  message.style.textAlign = "center";
-  message.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-  message.style.padding = "1rem";
-  message.style.borderRadius = "10px";
-  gameContainer.appendChild(message);
-
-  setTimeout(() => {
-    // Set a timeout to remove the win message
-    gameContainer.removeChild(message);
-    levelUpMessageDisplayed = false; // Reset the flag after the message disappears
-  }, 2000); // Message duration: 2 seconds
 }
 
 function clearRows() {
   for (let y = board.length - 1; y >= 0; y--) {
     if (board[y].every((value) => value !== 0)) {
-      board.splice(y, 1); // remove filled row
-      board.unshift(new Array(COLS).fill(0)); // add new empty row at the top
+      board.splice(y, 1);
+      board.unshift(new Array(COLS).fill(0));
       score += 10;
       linesCleared++;
     }
@@ -259,20 +209,20 @@ function clearRows() {
 }
 
 function dropPiece() {
-  currentPiece.y++; // Move the piece down
+  currentPiece.y++;
   if (collide(board, currentPiece)) {
-    currentPiece.y--; // Undo the move if the piece collides
-    merge(board, currentPiece); // Merge the piece into the board
-    clearLines(); // Ensure this call works without errors
-    currentPiece = nextPiece; // Load the next piece
-    nextPiece = createPiece(); // Create a new next piece
+    currentPiece.y--;
+    merge(board, currentPiece);
+    clearLines();
+    currentPiece = nextPiece;
+    nextPiece = createPiece();
 
     if (collide(board, currentPiece)) {
-      gameOver(); // Trigger game over if new piece collides
-      return; // Prevent further game loop execution
+      gameOver();
+      return;
     }
   }
-  dropCounter = 0; // Reset the drop counter
+  dropCounter = 0;
 }
 
 function movePiece(direction) {
@@ -283,30 +233,26 @@ function movePiece(direction) {
 }
 
 function rotatePiece() {
-  const rotatedShape = currentPiece.shape.map(
-    (
-      _,
-      index // Clone the current piece shape
-    ) => currentPiece.shape.map((row) => row[index]).reverse()
+  const rotatedShape = currentPiece.shape.map((_, index) =>
+    currentPiece.shape.map((row) => row[index]).reverse()
   );
 
-  const originalX = currentPiece.x; // Store the original x position
-  let offset = 1; // Initialize the offset
+  const originalX = currentPiece.x;
+  let offset = 1;
 
   while (collide(board, { ...currentPiece, shape: rotatedShape })) {
-    currentPiece.x += offset % 2 === 0 ? -offset : offset; // Move the piece left or right
+    currentPiece.x += offset % 2 === 0 ? -offset : offset;
     offset++;
     if (offset > currentPiece.shape[0].length) {
-      // If the piece is stuck
-      currentPiece.x = originalX; // Reset the x position
-      return; // Cancel the rotation
+      currentPiece.x = originalX;
+      return;
     }
   }
-  currentPiece.shape = rotatedShape; // Update the piece shape
+  currentPiece.shape = rotatedShape;
 }
 
 function updateStats() {
-  scoreDisplay.textContent = score; // Update score in the DOM
+  scoreDisplay.textContent = score;
   levelDisplay.textContent = level;
   linesDisplay.textContent = linesCleared;
 }
@@ -326,13 +272,12 @@ function resetGame() {
     gameMessage.remove();
   }
 
-  updateStats(); // reset stats on the screen
-  draw(); // redraw the board
-  update(); // start the game loop
+  updateStats();
+  draw();
+  update();
 }
 
 function update(time = 0) {
-  // game loop
   const deltaTime = time - lastTime;
   lastTime = time;
   dropCounter += deltaTime;
@@ -347,34 +292,65 @@ function update(time = 0) {
   }
 }
 
-function displayGameOverMessage() {
-  const gameContainer = document.getElementById("game-container");
-
+function displayMessage(messageText, messageType) {
+  const gameContainer = document.querySelector(".game-container");
   let messageContainer = document.getElementById("game-message");
-  if (!messageContainer) {
-    messageContainer = document.createElement("div");
-    messageContainer.id = "game-message";
-    messageContainer.textContent = "Game Over!";
-    messageContainer.style.position = "absolute";
-    messageContainer.style.top = "50%";
-    messageContainer.style.left = "50%";
-    messageContainer.style.transform = "translate(-50%, -50%)";
-    messageContainer.style.color = "white";
-    messageContainer.style.fontSize = "2rem";
-    messageContainer.style.textAlign = "center";
-    messageContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-    messageContainer.style.padding = "1rem";
-    messageContainer.style.borderRadius = "10px";
-    gameContainer.appendChild(messageContainer);
+
+  if (messageContainer) {
+    gameContainer.removeChild(messageContainer);
+  }
+
+  messageContainer = document.createElement("div");
+  messageContainer.id = "game-message";
+  messageContainer.textContent = messageText;
+
+  messageContainer.style.position = "absolute";
+  messageContainer.style.top = "50%";
+  messageContainer.style.left = "50%";
+  messageContainer.style.transform = "translate(-50%, -50%)";
+  messageContainer.style.padding = "1rem";
+  messageContainer.style.borderRadius = "10px";
+  messageContainer.style.textAlign = "center";
+  messageContainer.style.color = "white";
+  messageContainer.style.fontSize = "2rem";
+  messageContainer.style.zIndex = "10";
+
+  if (messageType === "level-up") {
+    messageContainer.style.backgroundColor = "rgba(0, 255, 0, 0.8)";
+  } else if (messageType === "game-over") {
+    messageContainer.style.backgroundColor = "rgba(255, 0, 0, 0.8)";
+  }
+
+  gameContainer.appendChild(messageContainer);
+
+  if (messageType === "level-up") {
+    setTimeout(() => {
+      if (messageContainer.parentNode) {
+        gameContainer.removeChild(messageContainer);
+      }
+    }, 2000);
   }
 }
 
-function gameOver() {
-  displayGameOverMessage();
-  isPaused = true;
+function displayLevelUpMessage() {
+  if (levelUpMessageDisplayed) return;
 
-  ctx.fillStyle = "rgba(0, 0, 0, 0.5)"; // darken the board
+  displayMessage(
+    `Congratulations, you leveled up! You are now on Level ${level}!`,
+    "level-up"
+  );
+  levelUpMessageDisplayed = true;
+
+  setTimeout(() => {
+    levelUpMessageDisplayed = false;
+  }, 2000);
+}
+
+function gameOver() {
+  isPaused = true;
+  ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
+  displayMessage("Game Over!", "game-over");
 }
 
 /*----------------------------- Event Listeners -----------------------------*/

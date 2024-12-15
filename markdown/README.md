@@ -4,8 +4,13 @@
 
 **Date: December 16, 2024**
 
-Application/Game
-![some alt text](www.url_to_an_image.com/image)
+**Images of the Game Application**
+
+![Snapshot of the Skyline Stackers Main Menu](/images/Screenshot%20For%20Markdown.jpg)
+
+![Snapshot of the Game Screen](/images/Screenshot%20For%20Markdown%20of%20Game.jpg)
+
+![Snapshot of the Instructions Screen](/images/Screenshot%20of%20Instructions.jpg)
 
 ## Getting Started Link
 
@@ -19,9 +24,9 @@ Application/Game
 
 ## Description
 
-In ***Skyline Stackers***, the classic tetris game is reimagined against the backdrop of a city skyline. Players take on the role of an urban architect, strategically stacking and clearing blocks to illuminate the city's skyscrapers.
+In **_Skyline Stackers_**, the classic tetris game is reimagined against the backdrop of a city skyline. Players take on the role of an urban architect, strategically stacking and clearing blocks to illuminate the city's skyscrapers.
 
-Why did I decide to create ***Skyline Stackers***? I enjoy arcade games so I wanted to combine the fun of a classic block-stacking game with the thrill of designing a skyline. It's not just about clearing lines, it's about improving spatial awareness, strategic planning, and quick decision-making, all while enjoying a relaxing yet challenging gameplay experience. 
+Why did I decide to create **_Skyline Stackers_**? I enjoy arcade games so I wanted to combine the fun of a classic block-stacking game with the thrill of designing a skyline. It's not just about clearing lines, it's about improving spatial awareness, strategic planning, and quick decision-making, all while enjoying a relaxing yet challenging gameplay experience.
 
 Can you keep up with the pace and construct the skyline before the blocks pile too high? It's time to stack smart and make the city glow like never before.
 
@@ -36,10 +41,12 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 1. **Start the Game:** Click the "Play Game" button to begin.
 2. **Controls:** Use the following controls to position tetris blocks.
+
 - Left Arrow: Move left
 - Right Arrow: Move right
 - Down Arrow: Move down faster
 - Up Arrow: Rotate block clockwise
+
 3. **Clear Lines:** Align blocks to fill horizontal lines completely to clear them.
 4. **Track Progress:** Watch your score and level increase as you play.
 5. **Game Over:** The game ends when the blocks stack to the top of the screen.
@@ -69,32 +76,36 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 ## Backlog Items / Planned Features
 
+- Display a preview of the next block in the game screen
 - Responsive design for different screen sizes
 - Advanced game modes and animations
 - Enhanced visuals and customizable themes
 - Integrate sound effects and background music
 - Develop social sharing options
-- Develop a leaderboard
+- Develop an online leaderboard
 - Tutorials and accessibility options
 - Create a mobile-friendly version
+- Customizable key bindings
 
 ## Attributions / Credit
 
 - **Fonts**
 
-- Google Fonts(https://fonts.google.com/)
+- Google Fonts (https://fonts.google.com/)
+- Big Shoulders Stencil Text (https://fonts.google.com/specimen/Big+Shoulders+Stencil+Text?preview.text=Skyline%20Stackers%0A&preview.size=64&categoryFilters=Feeling:%2FExpressive%2FCalm)
+- Quicksand (https://fonts.google.com/specimen/Quicksand?preview.text=Skyline%20Stackers%0A&preview.size=64&categoryFilters=Feeling:%2FExpressive%2FCalm)
 
-- **Images / Art:** 
+- **Images / Art:**
 
-- Pixabay(https://pixabay.com/)
+- Pixabay (https://pixabay.com/)
+- Futuristic City (https://pixabay.com/illustrations/cyberpunk-futuristic-fantasy-city-7887744/)
+- Gradient (https://pixabay.com/illustrations/color-distinct-wallpaper-background-815551/)
+- Skyline (https://pixabay.com/illustrations/skyscrapers-skyline-stars-city-6990425/)
 
-- **Icons:**
-
-- Material Symbols & Icons(https://fonts.google.com/icons)
-
-- **Code**
+- **Code References and Inspiration**
 
 - w3schools.com
 - stackoverflow.com
 - mdn.com
-
+- generalassembly.instructure.com
+- youtube.com (https://youtu.be/rAUn1Lom6dw?si=qYmzk-ZdVFExPmU6)
