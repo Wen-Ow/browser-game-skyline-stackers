@@ -1,4 +1,4 @@
-// Summary for Core Game Mechanics
+/*-------------------------------- Summary of Core Game Mechanics Notes --------------------------------*/
 
 /*
 1. Initialize the Game Board:

@@ -1,4 +1,4 @@
-/*-------------------------------- Graveyard for JS Pseudocode --------------------------------*/
+/*-------------------------------- Graveyard for JS Pseudocode Notes --------------------------------*/
 
 /*
 1. Initialize the Game Board:
