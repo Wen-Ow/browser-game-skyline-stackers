@@ -63,7 +63,7 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 - Visual Studio Code
 - Mural (wireframes)
-- Figma
+- Figma (medium-fidelity mockups)
 - Jira
 
 ## Phase 1 MVP Features
@@ -104,8 +104,10 @@ Can you keep up with the pace and construct the skyline before the blocks pile t
 
 - **Code References and Inspiration**
 
-- w3schools.com
-- stackoverflow.com
-- mdn.com
 - generalassembly.instructure.com
-- youtube.com (https://youtu.be/rAUn1Lom6dw?si=qYmzk-ZdVFExPmU6)
+- w3schools.com (https://www.w3schools.com/)
+- stackoverflow.com (https://stackoverflow.com/)
+- mdn.com (https://developer.mozilla.org/en-US/)
+- Code Tetris: JS Tutorial for Beginners (https://youtu.be/rAUn1Lom6dw?si=qYmzk-ZdVFExPmU6)
+- Tetris Game Tutorial: How to create a Tetris Game using HTML and JavaScript (https://iq.opengenus.org/create-tetris-game-using-js/)
+- Tetris: Building a game using JavaScript (https://dev.to/sleeplessbyte/tetris-building-a-game-using-javascript-3j6f)
