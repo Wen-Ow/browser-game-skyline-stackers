@@ -14,7 +14,7 @@
 
 ## Getting Started Link
 
-**Deployed Link:**
+**Deployed Link:** (https://wen-ow.github.io/browser-game-skyline-stackers/)
 
 **Jira Board Planning:** (https://owwen.atlassian.net/jira/software/projects/BTS/boards/1)
 

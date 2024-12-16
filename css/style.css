@@ -1,4 +1,3 @@
-/* Reset some default browser styles */
 * {
   margin: 0;
   padding: 0;
@@ -13,13 +12,11 @@ body {
   font-style: normal;
 }
 
-/* Reusable classes */
-/* Colors */
 .text-white {
   color: #ffffff;
 }
 
-/* fonts */
+/* Fonts */
 .font-sm {
   font-size: 1.5rem;
 }
@@ -138,7 +135,7 @@ body.game-page {
   background-size: cover;
 }
 
-/* Instructions page */
+/* Instructions Screen*/
 #instructions-container {
   max-width: 1000px;
   margin: 20 auto;
@@ -186,7 +183,7 @@ body.game-page {
   gap: 10px;
 }
 
-/* Game Container */
+/* Game Container Screen*/
 .game-container {
   display: flex;
   justify-content: center;
@@ -223,7 +220,7 @@ canvas#tetris-board {
   margin-top: 20px;
 }
 
-/* Header styling */
+
 header {
   text-align: center;
   padding: 20px 0;
@@ -231,7 +228,7 @@ header {
   color: white;
 }
 
-/* Main game area */
+/* Main Game Canvas */
 .main-game {
   display: flex;
   justify-content: center;
@@ -241,7 +238,6 @@ header {
   border: 2px solid #ccc;
 }
 
-/* Footer styling */
 footer {
   text-align: center;
   padding: 10px 0;
